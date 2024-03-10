@@ -1,0 +1,219 @@
+@tailwind components;
+
+*,
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: 'slnt' 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+html {
+  background-color: black;
+  color: white;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+a {
+  color: white !important;
+}
+
+@layer components {
+  h1,
+  .h1 {
+    @apply font-bold;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: clamp(2.5rem, 5vw, 4rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  h2,
+  .h2 {
+    @apply font-bold;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: clamp(2.25rem, 4vw, 3rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  h3,
+  .h3 {
+    @apply font-bold;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: clamp(1.75rem, 3vw, 2.25rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  h4,
+  .h4 {
+    @apply font-bold;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    line-height: clamp(1.5rem, 2.5vw, 2rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  h5,
+  .h5 {
+    @apply font-bold;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: clamp(1.25rem, 2vw, 1.75rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  h6,
+  .h6 {
+    @apply font-bold;
+
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+
+    line-height: clamp(1.1rem, 1.5vw, 1.5rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.postImageContainer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.postImage {
+  position: absolute !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.postTitle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.post-content {
+  pre {
+    margin-top: 1.5em;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+  }
+
+  @layer components {
+    h1 {
+      @apply font-bold;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: clamp(2.5rem, 5vw, 4rem);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    h2 {
+      @apply font-bold;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      line-height: clamp(2.25rem, 4vw, 3rem);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    h3 {
+      @apply font-bold;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      line-height: clamp(1.75rem, 3vw, 2.25rem);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    h4 {
+      @apply font-bold;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      line-height: clamp(1.5rem, 2.5vw, 2rem);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    h5 {
+      @apply font-bold;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      line-height: clamp(1.25rem, 2vw, 1.75rem);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    h6 {
+      @apply font-bold;
+
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+
+      line-height: clamp(1.1rem, 1.5vw, 1.5rem);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.custom-shape-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 105px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top .shape-fill {
+  fill: #000000;
+}
+
+.custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 105px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom .shape-fill {
+  fill: #000000;
+}

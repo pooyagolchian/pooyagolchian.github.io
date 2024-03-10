@@ -2,11 +2,10 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Arangodb install last version and configuration and backup and restore from Amazon AWS'
 pubDate: '2020-07-22'
-slug: 'arangodb-devops'
+slug: 'images'
 description: 'I use Shell script for all steps to automate Arangodb backup and update from a to z!'
-image:
-  url: 'https://docs.astro.build/assets/full-logo-light.png'
-  alt: 'The Astro logo with the word One.'
+cover: '/images/arango-devops.webp'
+coverAlt: 'database image'
 tags: ['database', 'DevOps']
 ---
 

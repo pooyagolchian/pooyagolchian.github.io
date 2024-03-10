@@ -1,0 +1,34 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menuToggle {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menuItems {
+  display: none;
+}
+
+.menu.open .menuItems {
+  display: block;
+}
+
+.menuItems ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menuItems li {
+  margin-bottom: 10px;
+}
+
+.menuItems li a {
+  text-decoration: none;
+  color: white;
+}

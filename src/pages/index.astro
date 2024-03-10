@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import BlogPost from '../components/BlogPost/index.tsx'
+const pageTitle = 'Pooya Golchian | Senior Software Engineer'
+import World from '../components/World/index'
+const allPosts = await Astro.glob('../pages/posts/*.md')
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <World client:load />
+
+  <div class="pb-28 md:w-11/12 m-auto container mx-auto w-full pt-28">
+    <h3 class="h2 py-10">Blog</h3>
+    <ul
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"
+    >
+      {
+        allPosts.map((post) => {
+          return (
+            <BlogPost
+              cover={post.frontmatter.cover}
+              coverAlt={post.frontmatter.coverAlt}
+              description={post.frontmatter.description}
+              url={post.url}
+              title={post.frontmatter.title}
+            />
+          )
+        })
+      }
+    </ul>
+  </div>
+
+  <div class="relative">
+    <div class="custom-shape-divider-top">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+  </div>
+
+  <div class="bg-white py-50 h-screen text-black">
+    <div class="md:w-11/12 m-auto container mx-auto w-full relative">
+      <div class="text-black flex justify-start align-middle pt-52">
+        <h3 class="h2">Github</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative">
+    <div class="custom-shape-divider-bottom">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,13 +1,12 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Vue.js multiple theme with css variable'
-date: '2021-01-17'
+pubDate: '2021-01-17'
 slug: 'vue-multiple-theme'
 description: 'Recently, I develop a customizable npm package for the color mode in Vue.js with CSS variable.'
-
-author:
-  name: 'Pooya Golchian'
-  bio: 'Frontend Developer'
-  img: '/img/avatar/pooya-golchian.png'
+cover: '/images/vue-template.webp'
+coverAlt: 'vue multiple theme'
+tags: ['database', 'DevOps']
 ---
 
 ### Intro

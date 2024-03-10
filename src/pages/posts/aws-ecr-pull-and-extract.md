@@ -1,13 +1,14 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'How to pull the AWS ECR docker image and extract all things in the docker image?'
-date: '2021-04-21'
+pubDate: '2021-04-21'
 slug: 'aws-ecr-pull-and-extract'
 description: 'Useful tips for AWS to pull docker image and, access all content in it.'
-author:
-  name: 'Pooya Golchian'
-  bio: 'Frontend Developer'
-  img: '/img/avatar/pooya-golchian.png'
+cover: '/images/ecr.webp'
+coverAlt: 'ecr image'
+tags: ['database', 'DevOps']
 ---
+
 
 ## Intro
 

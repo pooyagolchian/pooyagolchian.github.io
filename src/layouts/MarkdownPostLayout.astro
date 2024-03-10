@@ -1,0 +1,29 @@
+---
+import BaseLayout from './BaseLayout.astro'
+const { frontmatter } = Astro.props
+import dayjs from 'dayjs'
+import 'dayjs/locale/en'
+dayjs.locale('en')
+const formattedDate = dayjs(frontmatter.pubDate).format('D MMMM YYYY')
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <div class={'postImageContainer'}>
+    <img
+      src={frontmatter.cover}
+      alt={frontmatter.coverAlt}
+      class="postImage blur-2xl"
+      style={`background-image: url(${frontmatter.cover})`}
+    />
+    <div class="postTitle">
+      <h1 class="text-3xl">{frontmatter.title}</h1>
+      <p class="text-xs pt-5">{formattedDate}</p>
+    </div>
+  </div>
+
+  <div
+    class="md:w-11/12 m-auto container mx-auto w-full relative py-20 post-content"
+  >
+    <slot />
+  </div>
+</BaseLayout>

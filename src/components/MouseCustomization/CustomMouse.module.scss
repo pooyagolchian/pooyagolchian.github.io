@@ -1,18 +1,23 @@
-.custom-mouse {
+// CustomMouse.module.scss
+.customMouse {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 45px;
-  height: 45px;
+  top: -15px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.9;
+  background-color: #ff5b5b;
   border-radius: 50%;
+  border: 2px solid white;
   pointer-events: none;
-  z-index: 999999999;
-  background-color: rgba(255, 0, 0, 0.7);
-  opacity: 0.7;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
   visibility: hidden;
-}
 
-.custom-mouse.blue {
-  background-color: rgba(52, 37, 217, 0.7);
+  &.blueMouse {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    border: 2px solid white;
+  }
 }
