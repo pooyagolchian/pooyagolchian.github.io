@@ -92,7 +92,6 @@ const World: React.FC = () => {
       ref={sceneRef}
       style={{ width: '100%', height: '100%', position: 'relative' }}
     >
-      {/* Title in the Middle of the Screen */}
       <div
         className="title"
         style={{

@@ -175,45 +175,15 @@ a {
   }
 }
 
-.custom-shape-divider-top {
+.scroll-text {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  transition:
+    font-size 0.25s,
+    transform 0.25s;
   width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-top svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 105px;
-  transform: rotateY(180deg);
-}
-
-.custom-shape-divider-top .shape-fill {
-  fill: #000000;
-}
-
-.custom-shape-divider-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-bottom svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 105px;
-  transform: rotateY(180deg);
-}
-
-.custom-shape-divider-bottom .shape-fill {
-  fill: #000000;
+  text-align: center;
 }

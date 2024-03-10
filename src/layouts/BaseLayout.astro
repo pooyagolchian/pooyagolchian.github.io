@@ -2,6 +2,7 @@
 import Menu from '../components/Menu/index.tsx'
 import CustomMouse from '../components/MouseCustomization/index.tsx'
 import '../styles/global.scss'
+import Footer from '../components/Footer/index'
 const { pageTitle } = Astro.props
 ---
 
@@ -9,7 +10,7 @@ const { pageTitle } = Astro.props
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,10 +21,15 @@ const { pageTitle } = Astro.props
     <title>{pageTitle}</title>
   </head>
   <body>
-    <div class="w-screen h-screen">
+    <div class="relative w-screen h-screen">
       <CustomMouse client:idle />
       <Menu client:idle />
-      <slot />
+      <div class="flex flex-col min-h-screen">
+        <main class="flex-grow"><slot /></main>
+        <div>
+          <Footer client:load />
+        </div>
+      </div>
     </div>
   </body>
 </html>
