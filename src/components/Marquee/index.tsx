@@ -1,38 +1,45 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 
-interface MarqueeWithImagesProps {
-  im300ageCount: number
+interface ImageProps {
+  id: number
   basePath: string
 }
 
-const MarqueeWithImages: React.FC<MarqueeWithImagesProps> = ({
+interface MarqueeWithImagesProps {
+  imageCount?: number
+  basePath?: string
+}
+
+const MarqueeWithImages = ({
   imageCount = 31,
   basePath = '/images/framework-logo/',
-}) => {
-  const images: JSX.Element[] = []
+}: MarqueeWithImagesProps) => {
+  const images: ImageProps[] = []
 
   for (let i = 1; i <= imageCount; i++) {
-    images.push(
-      <img
-        key={i}
-        src={`${basePath}${i}.svg`}
-        alt={`SVG Image ${i}`}
-        width="100"
-        height="100"
-        className="mr-14" // Use Tailwind CSS classes to add margin
-      />
-    )
+    images.push({ id: i, basePath: `${basePath}${i}` })
   }
 
   return (
     <Marquee
-      className={'py-32'}
+      className="py-32"
       direction="left"
       speed={300}
       style={{ width: '100%', overflowX: 'scroll' }} // Adjust overflow to scroll
     >
-      <div className="flex">{images}</div>
+      <div className="flex">
+        {images.map((image) => (
+          <img
+            key={image.id}
+            src={`${image.basePath}.svg`}
+            alt={`SVG Image ${image.id}`}
+            width="100"
+            height="100"
+            className="mr-16"
+          />
+        ))}
+      </div>
     </Marquee>
   )
 }

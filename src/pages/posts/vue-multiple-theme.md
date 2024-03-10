@@ -6,7 +6,7 @@ slug: 'vue-multiple-theme'
 description: 'Recently, I develop a customizable npm package for the color mode in Vue.js with CSS variable.'
 cover: '/images/vue-template.webp'
 coverAlt: 'vue multiple theme'
-tags: ['database', 'DevOps']
+tags: ['Vue.js', 'Component']
 ---
 
 ### Intro

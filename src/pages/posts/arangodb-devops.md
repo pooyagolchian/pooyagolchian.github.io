@@ -6,7 +6,7 @@ slug: 'images'
 description: 'I use Shell script for all steps to automate Arangodb backup and update from a to z!'
 cover: '/images/arango-devops.webp'
 coverAlt: 'database image'
-tags: ['database', 'DevOps']
+tags: ['database', 'DevOps', 'Arango DB', 'ShellScript']
 ---
 
 ### Intro

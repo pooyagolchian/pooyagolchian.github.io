@@ -6,7 +6,7 @@ slug: 'ssh-tunnel'
 description: 'When you have a server and you want to have a VPN on the server. You can use this method. The following concepts are required to install.'
 cover: '/images/poor-man-vpn.webp'
 coverAlt: 'Poor man VPN'
-tags: ['database', 'DevOps']
+tags: ['Network', 'VPN', 'ShellScript']
 ---
 
 When you have a server and you want to have a VPN on the server. You can use this method. The following concepts are required to install.

@@ -5,8 +5,6 @@ import { OrbitControls } from '@react-three/drei'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger)
-
 extend({ OrbitControls })
 
 const SphereWireframe = () => {
@@ -58,6 +56,7 @@ const SphereWireframe = () => {
 
 const SphereComponent = () => {
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
     gsap.to('.scroll-text', {
       y: 200, // Move down by 200px
       fontSize: '160px', // Increase font size

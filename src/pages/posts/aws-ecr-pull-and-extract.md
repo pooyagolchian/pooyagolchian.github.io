@@ -6,7 +6,7 @@ slug: 'aws-ecr-pull-and-extract'
 description: 'Useful tips for AWS to pull docker image and, access all content in it.'
 cover: '/images/ecr.webp'
 coverAlt: 'ecr image'
-tags: ['database', 'DevOps']
+tags: ['AWS', 'DevOps', 'Docker']
 ---
 
 

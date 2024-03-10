@@ -6,7 +6,7 @@ slug: 'configure-fcm'
 description: 'Configuration firebase push notification with CDN'
 cover: '/images/gcm.webp'
 coverAlt: 'fcm image'
-tags: ['database', 'DevOps']
+tags: ['FCM', 'Vue.js', 'Frontend', 'GCM']
 ---
 
 ### Configuration firebase push notification with CDN

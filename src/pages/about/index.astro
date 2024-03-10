@@ -1,73 +1,92 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-const pageTitle = 'About Me'
-const happy = true
-const finished = true
-const goal = 3
-
-const identity = {
-  firstName: 'Sarah',
-  country: 'Canada',
-  occupation: 'Technical Writer',
-  hobbies: ['photography', 'birdwatching', 'baseball'],
-}
-
-const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'Writing Docs']
-const skillColor = 'navy'
-const fontWeight = 'bold'
-const textCase = 'uppercase'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+const pageTitle = 'Pooya Golchian | software engineer | About me'
 ---
 
-<style define:vars={{ skillColor, fontWeight, textCase }}>
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
-  .skill {
-    color: var(--skillColor);
-    font-weight: var(--fontWeight);
-    text-transform: var(--textCase);
-  }
-</style>
-
 <BaseLayout pageTitle={pageTitle}>
-  <h2>... and my new Astro site!</h2>
-
-  <p>
-    I am working through Astro's introductory tutorial. This is the second page
-    on my website, and it's the first one I built myself!
-  </p>
-
-  <p>
-    This site will update as I complete more of the tutorial, so keep checking
-    back and see how my journey is going!
-  </p>
-
-  {happy && <p>I am happy to be learning Astro!</p>}
-
-  {finished && <p>I finished this tutorial!</p>}
-
-  {
-    goal === 3 ? (
-      <p>My goal is to finish in 3 days.</p>
-    ) : (
-      <p>My goal is not 3 days.</p>
-    )
-  }
-
-  <p>Here are a few facts about me:</p>
-  <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-    {
-      identity.hobbies.length >= 2 && (
-        <li>
-          Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
-        </li>
-      )
-    }
-  </ul>
-  <p>My skills are:</p><p></p><ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
+  <div class="md:w-11/12 m-auto container mx-auto w-full relative">
+    <section class="p-6">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-lg mb-4">
+          My career in the tech industry began in January 2013 as a Drupal
+          Developer at Rayvarz, where I significantly enhanced application
+          scalability and performance by integrating <strong class="font-bold"
+            >jQuery</strong
+          >, <strong class="font-bold">CSS</strong>, <strong class="font-bold"
+            >HTML</strong
+          >, <strong class="font-bold">PHP</strong>, and <strong
+            class="font-bold">MySQL</strong
+          >. My passion for UI/UX design, utilizing <strong class="font-bold"
+            >Photoshop</strong
+          > and <strong class="font-bold">Illustrator</strong>, improved user
+          experiences and brand recognition across various client projects.
+        </p>
+        <p class="text-lg mb-4">
+          By January 2015, I transitioned to Axprint as a Frontend Developer,
+          where I focused on creating efficient admin panels with <strong
+            class="font-bold">React.js</strong
+          > and <strong class="font-bold">Redux</strong>. My efforts in
+          developing a high-performance website using <strong class="font-bold"
+            >Gatsby</strong
+          > and <strong class="font-bold">WordPress API</strong> enhanced content
+          management efficiency and significantly improved the company's online visibility
+          through advanced SEO techniques.
+        </p>
+        <p class="text-lg mb-4">
+          My journey continued at the Entekhab Group, where I led the creation
+          of a Drupal-based web app and a React and Electron.js based TV
+          application, significantly improving corporate communication and
+          content delivery speed. I also developed a secure React Native
+          application for internal contact management, showcasing my ability to
+          leverage technology for operational efficiency.
+        </p>
+        <p class="text-lg mb-4">
+          At Azki, as a Senior Frontend Developer, I further developed key admin
+          panels and websites using <strong class="font-bold">React.js</strong>, <strong
+            class="font-bold">Redux</strong
+          >, and <strong class="font-bold">Next.js</strong>, which improved user
+          engagement. My integration of <strong class="font-bold">Sentry</strong
+          > for error tracking, along with development practices like <strong
+            class="font-bold">Cypress</strong
+          >, <strong class="font-bold">Jest</strong>, and <strong
+            class="font-bold">Husky</strong
+          >, minimized deployment errors and optimized build processes.
+        </p>
+        <p class="text-lg mb-4">
+          Leading projects at Haftcin and Azkivam, I launched dynamic panels for
+          betting and reservation systems and developed admin panels and
+          websites, enhancing user participation and operational efficiency. My
+          work has always focused on optimizing content management and user
+          experience across various technologies.
+        </p>
+        <p class="text-lg mb-4">
+          Currently, as a Senior Frontend Developer at Cashew, I've had the
+          opportunity to further refine my skills in developing an admin and
+          merchant portal using <strong class="font-bold">React.js</strong>, <strong
+            class="font-bold">Redux</strong
+          >, and <strong class="font-bold">TypeScript</strong>, and building a
+          bilingual website with <strong class="font-bold">Next.js</strong>,
+          which has significantly improved interface efficiency and user
+          engagement.
+        </p>
+        <p class="text-lg mb-4">
+          Throughout my career, I've mastered technologies such as <strong
+            class="font-bold">JavaScript</strong
+          >, <strong class="font-bold">TypeScript</strong>, <strong
+            class="font-bold">React.js</strong
+          >, <strong class="font-bold">Vue.js</strong>, and <strong
+            class="font-bold">Next.js</strong
+          >, along with <strong class="font-bold">Cypress</strong> and <strong
+            class="font-bold">Jest</strong
+          > for testing. My experience spans across cloud computing with <strong
+            class="font-bold">Docker</strong
+          > and <strong class="font-bold">AWS</strong>, databases like <strong
+            class="font-bold">MySQL</strong
+          > and <strong class="font-bold">PostgreSQL</strong>, and design tools,
+          ensuring I deliver comprehensive solutions that drive business goals
+          and enhance user experiences.
+        </p>
+      </div>
+    </section>
+  </div>
 </BaseLayout>

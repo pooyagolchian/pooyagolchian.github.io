@@ -3,12 +3,11 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import data, { type Item } from './data'
 
-gsap.registerPlugin(ScrollTrigger)
-
 const GitHub = () => {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
     if (containerRef.current) {
       gsap.from(containerRef.current.children, {
         opacity: 0,

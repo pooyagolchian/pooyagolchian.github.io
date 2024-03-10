@@ -6,7 +6,7 @@ slug: 'host-jekyll-theme-on-github'
 description: 'In this article, you learn about how to deploy the Jekyll theme on the custom domain with Cloudflare'
 cover: '/images/jekyll-theme.webp'
 coverAlt: 'fcm image'
-tags: ['database', 'DevOps']
+tags: ['DevOps', 'Github', 'CloudFlare']
 ---
 
 ## How to deploy jekyll theme on custom domain
