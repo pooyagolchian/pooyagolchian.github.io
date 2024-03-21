@@ -5,8 +5,7 @@
   "private": true,
   "homepage": "https://pooya.blog",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/pooyagolchian/pooyagolchian.github.io"
+    "type": "git"
   },
   "scripts": {
     "dev": "astro dev",
