@@ -25,7 +25,6 @@ jobs:
         with:
           version: 8
           path: .
-          node-version: 20
           package-manager: pnpm@latest
 
   deploy:
