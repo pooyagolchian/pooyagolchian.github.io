@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BlogPost from '../components/BlogPost'
-const pageTitle = 'Pooya Golchian | Senior Software Engineer'
 import World from '../components/World'
 import GitHub from '../components/GitHub'
 import SphereComponent from '../components/SphereComponent'
 import MarqueeWithImages from '../components/Marquee'
 const allPosts = await Astro.glob('../pages/posts/*.md')
+const pageTitle = 'Pooya Golchian | Senior Software Engineer'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
