@@ -1,0 +1,12 @@
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.tag {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

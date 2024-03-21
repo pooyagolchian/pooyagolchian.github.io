@@ -76,23 +76,23 @@ echo "Change proxychain4 socks5 port sudo sed 's/foor/bar/g' /etc/proxychains.co
 1. Install [Bitvise][3] and [Proxifier][4]
 2. Follow image to install and configuration the SSH tunnel on the Windows
 
-![Bitvise](/img/content/ssh-tunnel/ssh/1.jpg)
+![Bitvise](/content/ssh-tunnel/ssh/1.jpg)
 
-![Bitvise](/img/content/ssh-tunnel/ssh/2.jpg)
+![Bitvise](/content/ssh-tunnel/ssh/2.jpg)
 
-![Bitvise](/img/content/ssh-tunnel/ssh/3.jpg)
+![Bitvise](/content/ssh-tunnel/ssh/3.jpg)
 
-![Bitvise](/img/content/ssh-tunnel/ssh/4.jpg)
+![Bitvise](/content/ssh-tunnel/ssh/4.jpg)
 
-![Proxyfier](/img/content/ssh-tunnel/proxy/1.jpg)
+![Proxyfier](/content/ssh-tunnel/proxy/1.jpg)
 
-![Proxyfier](/img/content/ssh-tunnel/proxy/2.jpg)
+![Proxyfier](/content/ssh-tunnel/proxy/2.jpg)
 
-![Proxyfier](/img/content/ssh-tunnel/proxy/3.jpg)
+![Proxyfier](/content/ssh-tunnel/proxy/3.jpg)
 
-![Proxyfier](/img/content/ssh-tunnel/proxy/4.jpg)
+![Proxyfier](/content/ssh-tunnel/proxy/4.jpg)
 
-![Proxyfier](/img/content/ssh-tunnel/proxy/5.jpg)
+![Proxyfier](/content/ssh-tunnel/proxy/5.jpg)
 
 [1]: https://github.com/rofl0r/proxychains-ng
 [2]: https://gist.github.com/pooyagolchian/520ee77f22836d92b483f3f8827f8767
