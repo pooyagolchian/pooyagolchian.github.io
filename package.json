@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.2",
   "private": true,
-  "packageManager": "corepack yarn",
+  "packageManager": "yarn",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
