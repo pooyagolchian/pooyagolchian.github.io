@@ -8,6 +8,10 @@ import yaml from '@rollup/plugin-yaml';
 export default defineConfig({
   site: 'https://pooya.blog',
   integrations: [tailwind(), react()],
+  trailingSlash: "never",
+  server: {
+    port: 8080
+  },
   vite: {
     plugins: [yaml()]
   }
