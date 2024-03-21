@@ -18,10 +18,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
-        uses: withastro/action@v2
+        uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
+      - name: Install dependencies
+        run: yarn install
 
   deploy:
     needs: build
