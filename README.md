@@ -64,6 +64,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ├── package.json                    # Project metadata and dependencies
 ├── tsconfig.json                   # TypeScript configuration
 └── README.md                       # Project README file
-# Project README file
 
 ```
