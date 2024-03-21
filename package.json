@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.2",
   "private": true,
-  "packageManager": "yarn",
+  "packageManager": "npm@18.14.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
