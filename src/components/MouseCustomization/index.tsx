@@ -1,4 +1,3 @@
-// CustomMouse.tsx
 import React, { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import clsx from 'clsx'

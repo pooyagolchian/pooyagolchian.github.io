@@ -1,4 +1,3 @@
-// Define a type for menu item
 export type MenuItem = {
   label: string
   link: string

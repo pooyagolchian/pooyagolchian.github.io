@@ -58,13 +58,13 @@ const SphereComponent = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
     gsap.to('.scroll-text', {
-      y: 200, // Move down by 200px
-      fontSize: '160px', // Increase font size
+      y: 200,
+      fontSize: '160px',
       scrollTrigger: {
         trigger: '.scroll-text',
-        start: 'top top', // Trigger animation when the top of the text comes into view
-        end: 'bottom bottom', // Trigger animation when the bottom of the text goes out of view
-        scrub: true, // Smooth animation with scroll
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
       },
     })
   }, [])
