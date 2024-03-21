@@ -6,7 +6,7 @@ import yaml from '@rollup/plugin-yaml';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://pooya.blog',
+  site: 'http://pooya.blog/',
   integrations: [tailwind(), react()],
   vite: {
     plugins: [yaml()]
