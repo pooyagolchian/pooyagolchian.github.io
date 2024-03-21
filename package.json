@@ -3,7 +3,11 @@
   "type": "module",
   "version": "0.0.2",
   "private": true,
-  "packageManager": "pnpm@8.14.1",
+  "homepage": "https://pooya.blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pooyagolchian/pooyagolchian.github.io"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
