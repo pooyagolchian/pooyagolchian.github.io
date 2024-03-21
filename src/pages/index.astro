@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BlogPost from '../components/BlogPost'
 import World from '../components/World'
-import GitHub from '../components/GitHub'
 import SphereComponent from '../components/SphereComponent'
 import MarqueeWithImages from '../components/Marquee'
 const allPosts = await Astro.glob('../pages/posts/*.md')
@@ -33,12 +32,12 @@ const pageTitle = 'Pooya Golchian | Senior Software Engineer'
     </ul>
   </div>
 
-  <div class="md:w-11/12 m-auto container mx-auto w-full relative">
-    <div class="flex justify-start align-middle flex-col">
-      <h3 class="h2">Github</h3>
-      <GitHub client:only="react" />
-    </div>
-  </div>
+  <!-- <div class="md:w-11/12 m-auto container mx-auto w-full relative"> -->
+  <!--   <div class="flex justify-start align-middle flex-col"> -->
+  <!--     <h3 class="h2">Github</h3> -->
+  <!--     <GitHub client:only="react" /> -->
+  <!--   </div> -->
+  <!-- </div> -->
 
   <SphereComponent client:only="react" />
   <MarqueeWithImages client:only="react" />
