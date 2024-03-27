@@ -21,7 +21,9 @@ const formattedDate = dayjs(frontmatter.pubDate).format('D MMMM YYYY')
     </div>
   </div>
 
-  <div class="max-w-5xl mx-auto relative py-20 post-content">
+  <div
+    class="max-w-5xl post-content md:w-11/12 m-auto container px-5 md:px-0 py-5 mx-auto w-full relative mb-5"
+  >
     <slot />
   </div>
 </BaseLayout>

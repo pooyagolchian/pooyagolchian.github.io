@@ -1,13 +1,15 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { Canvas, extend, useThree, useFrame } from '@react-three/fiber'
 import { Mesh, Color } from 'three'
 import { OrbitControls } from '@react-three/drei'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import styles from './styles.module.scss'
+import clsx from 'clsx'
 
 extend({ OrbitControls })
 
-const SphereWireframe = () => {
+const SphereWireframe = ({ fontSize }) => {
   const meshRef = useRef<Mesh>()
   const {
     camera,
@@ -55,11 +57,13 @@ const SphereWireframe = () => {
 }
 
 const SphereComponent = () => {
+  const [fontSize, setFontSize] = useState('40px') // Initial font size for desktop
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
     gsap.to('.scroll-text', {
       y: 200,
-      fontSize: '160px',
+      fontSize: fontSize,
       scrollTrigger: {
         trigger: '.scroll-text',
         start: 'top top',
@@ -67,18 +71,28 @@ const SphereComponent = () => {
         scrub: true,
       },
     })
-  }, [])
+  }, [fontSize])
 
-  const textStyle = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    fontSize: '40px',
-    transition: 'font-size 0.5s, transform 0.5s',
-    width: '100%',
-    textAlign: 'center',
-  }
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setFontSize('140px')
+      } else {
+        setFontSize('60px') // Adjust the font size for smaller screens
+      }
+    }
+
+    // Initial call to set font size based on window width
+    handleResize()
+
+    // Event listener for window resize
+    window.addEventListener('resize', handleResize)
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <div style={{ position: 'relative' }}>
@@ -88,9 +102,14 @@ const SphereComponent = () => {
       >
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <SphereWireframe />
+        <SphereWireframe fontSize={fontSize} />
       </Canvas>
-      <div className="scroll-text font-extrabold" style={textStyle}>
+      <div
+        className={clsx(
+          'scroll-text font-extrabold hidden md:flex',
+          styles.textStyle
+        )}
+      >
         Think out of box
       </div>
     </div>

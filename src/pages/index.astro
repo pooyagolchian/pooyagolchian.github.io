@@ -10,9 +10,30 @@ const pageTitle = 'Pooya Golchian | Senior Software Engineer'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <World client:only="react" />
+  <div class="hidden lg:flex">
+    <World client:only="react" />
+  </div>
 
-  <div class="pb-28 md:w-11/12 m-auto container mx-auto w-full pt-28">
+  <div class="flex flex-col lg:flex-row lg:hidden">
+    <div
+      class="md:w-11/12 m-auto container px-5 md:px-0 py-5 mx-auto w-full relative mb-5"
+    >
+      <h1 class="text-2xl font-bold mb-4 h1">Design, build, ship</h1>
+      <p class="mb-4">
+        Whether you're embarking on a new project or enhancing an established
+        product suite, I offer the expertise and practicality to make tangible
+        progress toward your business objectives. My proficiency spans React,
+        Next.js, Astro, and Nest.js. I've earned international acclaim for our
+        contributions to design systems, content management systems, and
+        front-end infrastructure. We prioritize team productivity and best
+        practices. Get in touch with us—I am eager to collaborate with you.
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="md:w-11/12 m-auto container px-5 md:px-0 py-5 mx-auto w-full relative mb-5"
+  >
     <h3 class="h2 py-10">Blog</h3>
     <ul
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 blog-posts"
@@ -33,7 +54,9 @@ const pageTitle = 'Pooya Golchian | Senior Software Engineer'
     </ul>
   </div>
 
-  <div class="md:w-11/12 m-auto container mx-auto w-full relative">
+  <div
+    class="md:w-11/12 m-auto container px-5 md:px-0 py-5 mx-auto w-full relative mb-5"
+  >
     <div class="flex justify-start align-middle flex-col">
       <h3 class="h2">Github</h3>
       <GitHub client:only="react" />

@@ -50,7 +50,7 @@ const GitHub = () => {
   }, [])
 
   return (
-    <div ref={containerRef} className="grid grid-cols-2 md:grid-cols-4 gap-10">
+    <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-4 gap-10">
       {data.map((item: Item, index: number) => {
         const gradientColor = getRandomColor()
         return (
