@@ -24,12 +24,11 @@ const Footer: React.FC = () => {
   }, [])
 
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    const { target } = event.currentTarget
+    const target = event.currentTarget as HTMLElement
     if (target && target.getAttribute('data-type') === 'external') {
       target.setAttribute('rel', 'noOpener noReferrer')
     }
   }
-
   return (
     <footer
       className="md:w-11/12 m-auto container px-5  w-full relative mb-5 mx-auto text-white py-12 flex flex-wrap justify-between"
