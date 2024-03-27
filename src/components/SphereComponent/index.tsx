@@ -9,7 +9,11 @@ import clsx from 'clsx'
 
 extend({ OrbitControls })
 
-const SphereWireframe = () => {
+interface SphereWireframeProps {
+  fontSize: string
+}
+
+const SphereWireframe = ({ fontSize }: SphereWireframeProps) => {
   const meshRef = useRef<Mesh>()
   const {
     camera,
