@@ -23,7 +23,7 @@ const randomGradientClass = () => {
 
 const Tags: React.FC<TagsProps> = ({ tags }) => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
       {tags?.map((tag: string) => (
         <a
           key={tag}
