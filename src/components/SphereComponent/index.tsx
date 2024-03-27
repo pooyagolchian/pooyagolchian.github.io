@@ -9,11 +9,7 @@ import clsx from 'clsx'
 
 extend({ OrbitControls })
 
-interface SphereWireframeProps {
-  fontSize: string
-}
-
-const SphereWireframe = ({ fontSize }: SphereWireframeProps) => {
+const SphereWireframe = () => {
   const meshRef = useRef<Mesh>()
   const {
     camera,
@@ -103,7 +99,7 @@ const SphereComponent = () => {
       >
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <SphereWireframe fontSize={fontSize} />
+        <SphereWireframe />
       </Canvas>
       <div
         className={clsx(

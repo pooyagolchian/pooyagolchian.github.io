@@ -3,7 +3,8 @@ import clsx from 'clsx'
 import menuItems from './menuItems.ts'
 
 const Menu = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
@@ -51,7 +52,7 @@ const Menu = () => {
                     width="58"
                     height="58"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
                     <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
@@ -130,7 +131,7 @@ const Menu = () => {
                     width="58"
                     height="58"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
                     <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />

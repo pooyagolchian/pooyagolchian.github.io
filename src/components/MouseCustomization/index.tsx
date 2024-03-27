@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import clsx from 'clsx'
 import styles from './CustomMouse.module.scss'
-import * as THREE from 'three'
 
 const CustomMouse = () => {
   const mouseRef = useRef<HTMLDivElement>(null)
@@ -44,7 +43,7 @@ const CustomMouse = () => {
         if (window.location.href.includes('yourTargetPage')) {
           setLinkHovered(true)
         }
-      }, 100) // Adjust the delay if necessary
+      }, 100)
     }
 
     const links = document.querySelectorAll('a')
@@ -68,11 +67,9 @@ const CustomMouse = () => {
     const mouse = mouseRef.current
     if (!mouse) return
 
-    // Update mouse position
     mousePosition.current.x = e.clientX
     mousePosition.current.y = e.clientY
 
-    // Smooth mouse movement using GSAP
     gsap.to(mouse, {
       x: mousePosition.current.x,
       y: mousePosition.current.y,
