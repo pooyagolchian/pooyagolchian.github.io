@@ -61,7 +61,7 @@ const SphereWireframe = ({ fontSize }: SphereWireframeProps) => {
 }
 
 const SphereComponent = () => {
-  const [fontSize, setFontSize] = useState('40px') // Initial font size for desktop
+  const [fontSize, setFontSize] = useState('40px')
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -80,19 +80,16 @@ const SphereComponent = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setFontSize('140px')
+        setFontSize('200px')
       } else {
-        setFontSize('60px') // Adjust the font size for smaller screens
+        setFontSize('60px')
       }
     }
 
-    // Initial call to set font size based on window width
     handleResize()
 
-    // Event listener for window resize
     window.addEventListener('resize', handleResize)
 
-    // Cleanup function to remove event listener
     return () => {
       window.removeEventListener('resize', handleResize)
     }
