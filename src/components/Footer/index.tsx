@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
           mission to transform 2D landscapes into vibrant 3D masterpieces. So,
           grab a cuppa and let's embark on this whimsical journey together! ☕✨
         </p>
-        <h6>Let's send an email for work!</h6>
+        <h6>Let's connect!</h6>
         <a href="mailto:info@pooya.blog">Send Email to info@pooya.blog</a>
       </div>
       <div className="w-full md:w-1/2 flex row justify-end">
