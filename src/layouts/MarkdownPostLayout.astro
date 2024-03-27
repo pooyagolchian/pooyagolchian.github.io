@@ -15,14 +15,14 @@ const formattedDate = dayjs(frontmatter.pubDate).format('D MMMM YYYY')
       class="postImage blur-2xl"
       style={`background-image: url(${frontmatter.cover})`}
     />
-    <div class="postTitle">
+    <div class="postTitle px-10 sm:px-360 lg:px-64">
       <h1 class="text-3xl">{frontmatter.title}</h1>
       <p class="text-xs pt-5">{formattedDate}</p>
     </div>
   </div>
 
   <div
-    class="max-w-5xl post-content md:w-11/12 m-auto container px-5 md:px-0 py-5 mx-auto w-full relative mb-5"
+    class="max-w-5xl post-content md:w-11/12 m-auto container px-5 md:px-0 py-5 mx-auto w-full relative mb-20 mt-20"
   >
     <slot />
   </div>
