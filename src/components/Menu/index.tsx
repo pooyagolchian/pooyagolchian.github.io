@@ -9,7 +9,7 @@ const Menu = () => {
   }
 
   return (
-    <div className="md:w-11/12 m-auto container px-5 md:px-0 py-5 mx-auto w-full relative mb-5">
+    <div className="md:w-11/12 m-auto container px-5 py-5 mx-auto w-full relative mb-5">
       <div className="relative">
         <div
           className="flex justify-between flex-row lg:hidden cursor-pointer items-center"
